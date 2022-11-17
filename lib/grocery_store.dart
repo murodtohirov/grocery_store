@@ -145,6 +145,11 @@ double getTotalPricesDairy(List products) {
   // The total of prices of dairy products
 
   double total = 0.0;
+  for (var product in products) {
+    if (product['type'] == 'Dairy') {
+      total += product['price'];
+    }
+  }
 
   return total;
 }
