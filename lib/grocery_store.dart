@@ -199,6 +199,18 @@ String getMostExpensive(List products) {
   // The most expensive product
 
   String mostExpensive = '';
+  List price = [];
+  List name = [];
+  List nam = [];
+
+  for (var product in products) {
+    name.add(product['name']);
+    price.add(product['price']);
+    nam.add(product['price']);
+  }
+  price.sort();
+  mostExpensive = name[nam.indexOf(price.last)];
+  
 
   return mostExpensive;
 }
