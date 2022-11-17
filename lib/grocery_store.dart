@@ -64,7 +64,6 @@ int getAmountFruits(List products) {
   return amount;
 }
 
-
 // Define a function that finds the total of prices of fruits from a list of products
 double getTotalPricesFruits(List products) {
   /// Returns the total of prices of fruits from a list of products
@@ -110,6 +109,11 @@ double getTotalPricesVegetables(List products) {
   // The total of prices of vegetables
 
   double total = 0.0;
+  for (var product in products) {
+    if (product['type'] == 'vegetable') {
+      total += product['price'];
+    }
+  }
 
   return total;
 }
