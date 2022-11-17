@@ -55,6 +55,7 @@ int getAmountFruits(List products) {
   // The amount of fruits
 
   int amount = 0;
+  
 
   return amount;
 }
