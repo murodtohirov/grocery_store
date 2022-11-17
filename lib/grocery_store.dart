@@ -181,6 +181,11 @@ double getTotalPricesMeat(List products) {
   // The total of prices of meat products
 
   double total = 0.0;
+  for (var product in products) {
+    if (product['type'] == 'meat') {
+      total += product['price'];
+    }
+  }
 
   return total;
 }
