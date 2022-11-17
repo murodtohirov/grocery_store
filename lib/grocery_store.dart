@@ -22,6 +22,9 @@ int getAmount(List products) {
   // The amount of products
 
   int amount = 0;
+  for (var product in products) {
+    amount += 1;
+  }
 
   return amount;
 }
@@ -35,6 +38,10 @@ double getTotalPrices(List products) {
   // The total of prices
 
   double total = 0.0;
+
+  for (var product in products) {
+    total += product['price'];
+  }
 
   return total;
 }
