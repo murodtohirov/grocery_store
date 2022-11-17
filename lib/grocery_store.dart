@@ -163,6 +163,11 @@ int getAmountMeat(List products) {
   // The amount of meat products
 
   int amount = 0;
+  for (var product in products) {
+    if (product['type'] == 'meat') {
+      amount += 1;
+    }
+  }
 
   return amount;
 }
